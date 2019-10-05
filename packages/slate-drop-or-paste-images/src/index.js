@@ -56,7 +56,7 @@ function DropOrPasteImages(options = {}) {
    */
 
   function asyncApplyChange(editor, file) {
-    return Promise.resolve(editor.insertImage(file)).then(() => {
+    return Promise.resolve(insertImage(editor, file)).then(() => {
       editor.onChange()
     })
   }
